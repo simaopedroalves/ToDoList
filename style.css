@@ -1,0 +1,212 @@
+/* =========================== TO DO LIST ======================= */
+  @import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Zilla+Slab:wght@300&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.border {
+    border: solid 5px red;
+}
+
+.border2 {
+    border: solid 5px green;
+}
+
+:root {
+   --text-color: hsla(215, 0%, 50%, 0.5);
+   --div-color: rgb(88, 137, 243);
+   --div-border-color: rgb(25, 131, 3);
+   --title-color: rgb(255, 168, 5);
+   --sub-title-color: rgba(247, 244, 107, 0.945);
+   --background: linear-gradient(70deg,  rgba(247, 244, 107, 0.945),  rgba(211, 247, 6, 0.596));
+   --black-color: rgb(0,0,0);
+   --delete-color: rgba(255,0,0,1);
+}
+
+.toDoList {
+    display: grid;
+    justify-content: center;
+    align-items: flex-start;
+    background: var(--background);
+    min-height: 100vh;
+    width: 100vw;
+    position: relative;
+    margin: 7rem 0 0 0;
+}
+ 
+.toDoListTitle {
+    text-transform: uppercase;
+    font-family: 'Black Ops One';
+}
+ 
+.titleDiv {
+    display: flex;
+    /* flex-wrap: wrap; */
+    flex-direction: column;
+    justify-items: center;
+    gap: 0.5rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    /* background-color: var(--text-color); */
+    background: var(--background);
+    overflow: hidden;
+    width: 100%;
+    padding: 0.7rem;
+    text-align: center;
+}
+ 
+
+.input-box {
+    display: flex;
+    justify-content: space-around;
+}
+
+.icons {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem;
+}
+
+i  {
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.editBtn {
+    color: var(--div-color);
+}
+
+.xBtn {
+    color: var(--delete-color);
+}
+
+.saveBtn {
+    display: none;
+    color: var(--div-border-color)
+} 
+
+.checkBtn {
+    color: var(--div-border-color);
+}
+
+.item {
+    min-height: 1.5rem;
+    max-width: 75%;
+    border: 0;
+    border-radius: 0.5rem;
+    outline: 0;
+    padding: 0.7rem;
+    background-color: var(--title-color);
+    color: white;
+    letter-spacing: 0.1rem;
+    font-size: 1rem;
+}
+
+.item::placeholder {
+    color: white;
+    letter-spacing: 0.1rem;
+
+}
+
+.item:hover {
+    background-color: var(--div-color);
+    cursor: pointer;
+}
+
+.addBtn {
+    border: solid 0.2rem var(--title-color);
+    outline: 0;
+    padding: 0.3rem;
+    border-radius: 20%;
+    color: white;
+    background-color: var(--title-color);
+    cursor: pointer;
+    margin-left: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    width: 15%;
+}
+
+.addBtn:hover {
+    color: white;
+    background-color: var(--title-color);
+}
+
+.newItem {
+    display: grid;
+    gap: 0.5rem;
+    align-items: self-start;
+    margin: 3rem 0;
+    width: 80vw;
+    overflow: hidden;
+    grid-template-columns: repeat(2, 1fr);
+
+}
+
+.textDiv {
+    display: grid;
+    justify-content: flex-start;
+    border: solid var(--title-color) 0.3rem;
+    border-radius: 0.5rem;
+    /* background: var(--sub-title-color); */
+}
+
+.text {
+    border: 0;
+    outline: 0;
+    padding: .5rem;
+    color: var(--black-color);
+    font-weight: bold;
+    font-size: large;
+    z-index: 2; 
+    resize: none; 
+    width: auto;
+    font-family: 'Zilla Slab';
+}
+
+.text:enabled {
+    background: none;
+}
+
+.toDoListForm {
+    display: none;
+}
+
+@media screen and (min-width: 600px) {
+    .newItem {
+        margin-top: 5rem;
+        margin-left: auto;
+        margin-right: auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: space-between;
+        gap: 2rem;
+    }
+
+    .text::-webkit-scrollbar {
+        display: none;
+        
+    }
+ 
+  
+}
+
+@media screen and (min-width: 900px) {
+    .newItem {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-content: center;
+    
+    }
+
+   
+
+   
+}
