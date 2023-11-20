@@ -67,6 +67,7 @@ function displayList () {
     edit()
     saveNote()
     hoverLine()
+    
 }
 
 
@@ -143,23 +144,12 @@ function saveNote() {
             noteSaved(text[i].value, i)
         })
         saveBtn[i].style.display = 'none'
-
     })
-   
-}
 
-function noteSaved(text, i){
-    storageArray[i] = text
-    localStorage.setItem('list', JSON.stringify(storageArray))
-    location.reload()
-}
-
-// function saveBtnDesappear(i) {
-//     let saveBtn = document.querySelectorAll('.saveBtn')
     
-//     saveBtn[i].style.display = 'none'
-// }
-
+    
+}
+   
 function hoverLine() {
     let checkBtn = document.querySelectorAll('.checkBtn')
 
@@ -170,8 +160,22 @@ function hoverLine() {
     })
 }
 
+function noteSaved(text, i){
+    storageArray[i] = text
+    localStorage.setItem('list', JSON.stringify(storageArray))
+    location.reload()
+
+}
+
+// function saveBtnDesappear(i) {
+//     let saveBtn = document.querySelectorAll('.saveBtn')
+    
+//     saveBtn[i].style.display = 'none'
+// }
+
+
 function checked(i) {
-    let text = document.querySelectorAll('.text')
+    let text = document.querySelectorAll('#toDoItem')
     text[i].style.textDecoration = 'line-through solid red 5px'
 }
 
@@ -195,5 +199,5 @@ submitNotes.addEventListener('click', () => {
 
 window.onload = function() {
     displayDate()
-    displayList()  
+    displayList()
 };
