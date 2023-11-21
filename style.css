@@ -31,10 +31,9 @@
     justify-content: center;
     align-items: flex-start;
     background: var(--text-color);
-    min-height: 100vh;
+    min-height:auto;
     width: 100vw;
-    position: relative;
-    margin: 7rem 0 0 0;
+    padding-bottom: 90vh;
 }
  
 .toDoListTitle {
@@ -44,26 +43,24 @@
  
 .titleDiv {
     display: flex;
-    /* flex-wrap: wrap; */
     flex-direction: column;
+    align-content: center;
     justify-items: center;
     gap: 0.5rem;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 10;
-    /* background-color: var(--text-color); */
-    background: var(--text-color);
     overflow: hidden;
     width: 100%;
-    padding: 0.7rem;
     text-align: center;
+    
 }
  
-
 .input-box {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    align-content: center;
+    position: sticky;
+    top: 3rem;
+    margin-top: 1rem;
+    z-index: 10;
 }
 
 .icons {
@@ -124,38 +121,37 @@ i  {
     border: solid 0.2rem var(--title-color);
     outline: 0;
     padding: 0.3rem;
-    border-radius: 20%;
+    border-radius: 3rem;
     color: white;
-    background-color: var(--title-color);
+    background-color: var(--div-border-color);
     cursor: pointer;
     margin-left: 1rem;
     font-size: 1.2rem;
     font-weight: bold;
-    width: 15%;
+    min-width: 25%;
 }
 
 .addBtn:hover {
     color: white;
-    background-color: var(--title-color);
+    background-color: var(--text-color);
 }
 
 .newItem {
     display: grid;
-    gap: 0.5rem;
-    align-items: self-start;
-    margin: 3rem 0;
+    justify-content: center;
+    align-items: center;
     width: 80vw;
     overflow: hidden;
     grid-template-columns: repeat(2, 1fr);
-
+    gap:  1rem;
 }
 
 .textDiv {
     display: grid;
-    justify-content: flex-start;
     border: solid var(--title-color) 0.3rem;
     border-radius: 0.5rem;
-    /* background: var(--sub-title-color); */
+    margin-top: 3rem;
+
 }
 
 .text {
@@ -167,7 +163,7 @@ i  {
     font-size: large;
     z-index: 2; 
     resize: none; 
-    width: auto;
+    width: 100%;
     font-family: 'Zilla Slab';
 }
 
@@ -193,6 +189,14 @@ i  {
     .text::-webkit-scrollbar {
         display: none;
         
+    }
+
+    .item {
+        min-width: 40vw;
+    }
+    .input-box {
+        margin-top: 5rem;
+
     }
  
   

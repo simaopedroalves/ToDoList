@@ -58,7 +58,7 @@ function displayList () {
                 <i class="fa-solid fa-pencil editBtn"></i>
                 <i class="fa-solid fa-circle-xmark xBtn"></i>
                 <i class="fa-regular fa-floppy-disk saveBtn"></i>
-                <i class="fa-solid fa-circle-check checkBtn"></i>
+        <!--   <i class="fa-solid fa-circle-check checkBtn"></i> -->
                 </div>
                 </div>`
     }
