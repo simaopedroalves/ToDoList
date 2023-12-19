@@ -146,7 +146,7 @@ i  {
 }
 
 .my-name {
-    background-color: var(--black);
+    background-color: transparent;
     color: var(--white);
     text-transform: uppercase;
     /* text-align: right; */
