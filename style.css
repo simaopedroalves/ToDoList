@@ -109,7 +109,7 @@ i  {
     color: var(--white);
     font-weight: bold;
     background-color: var(--black);
-    border: 0.2rem solid var(--white);
+    border: 0.1rem solid var(--white);
 }
 
 .item::placeholder {
@@ -129,10 +129,9 @@ i  {
     font-size: 1.2rem;
     font-weight: bold;
     min-width: 50%;
-    border: 0.2rem solid var(--white);
+    border: 0.1rem solid var(--white);
     background-color: var(--black);
     color: var(--white);
-
 }
 
 .addBtn:hover {
@@ -156,6 +155,7 @@ i  {
     position: fixed;
     bottom: 0;
     right: 0;
+    font-family: 'Zilla Slab';
 }
 
 @media screen and (min-width: 600px) {
