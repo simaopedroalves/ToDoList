@@ -7,60 +7,65 @@
     box-sizing: border-box;
 }
 
-.border {
-    border: solid 5px red;
-}
-
-.border2 {
-    border: solid 5px green;
-}
-
 :root {
-   --text-color: hsla(215, 0%, 50%, 0.5);
-   --div-color: rgb(88, 137, 243);
-   --div-border-color: rgb(25, 131, 3);
-   --title-color: rgb(255, 168, 5);
-   --sub-title-color: rgba(247, 244, 107, 0.945);
-   --background: linear-gradient(70deg,  rgba(247, 244, 107, 0.945),  rgba(211, 247, 6, 0.596));
-   --black-color: rgb(0,0,0);
-   --delete-color: rgba(255,0,0,1);
+    --black: #000;
+    --white: #fff;
+}
+
+.toDoListTitle, .date {
+    text-transform: uppercase;
+    font-family: 'Black Ops One';
+    color: var(--white);
+    letter-spacing: 0.1rem;
 }
 
 .toDoList {
     display: grid;
-    justify-content: center;
-    align-items: flex-start;
-    background: var(--text-color);
-    min-height:auto;
-    width: 100vw;
-    padding-bottom: 90vh;
+    /* min-height: auto; */
+    max-width: 100vw;
+    padding: 0 0.1rem 70vh 0.1rem;
+    background-color: var(--black);
+    /* min-height: 100vh; */
 }
  
-.toDoListTitle {
-    text-transform: uppercase;
-    font-family: 'Black Ops One';
+.newItem {
+    display: grid;
+    margin-top: 3rem;
+    gap: 0.5rem;
+
+}
+
+.textDiv {
+    display: grid;
+    border: solid var(--white) 0.1rem;
+    border-radius: 0.5rem;
+    
+}
+
+.text {
+    border: 0.1rem solid var(--white);
+    color: var(--white);
+    letter-spacing: 0.1rem;
+    outline: 0;
+    padding: .5rem;
+    font-size: large;
+    z-index: 2; 
+    resize: none; 
+    font-family: 'Zilla Slab';
+
 }
  
 .titleDiv {
     display: flex;
     flex-direction: column;
-    align-content: center;
-    justify-items: center;
     gap: 0.5rem;
     overflow: hidden;
-    width: 100%;
-    text-align: center;
-    
+    text-align: center;   
 }
  
-.input-box {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    position: sticky;
-    top: 3rem;
-    margin-top: 1rem;
-    z-index: 10;
+.to-be-big {
+    min-height: 80vh;
+    min-width: 95vw;
 }
 
 .icons {
@@ -76,103 +81,81 @@ i  {
     font-size: 1.2rem;
 }
 
-.editBtn {
-    color: var(--div-color);
+.editBtn, .xBtn, .saveBtn, .checkBtn {
+    background-color: var(--black);
+    color: var(--white);
+    padding: 0.1rem;
 }
 
-.xBtn {
-    color: var(--delete-color);
-}
-
-.saveBtn {
-    display: none;
-    color: var(--div-border-color)
-} 
-
-.checkBtn {
-    color: var(--div-border-color);
+.input-box {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: sticky;
+    top: 3rem;
+    margin-top: 1rem;
+    z-index: 10;
+    max-width: 100%;
 }
 
 .item {
     min-height: 1.5rem;
-    max-width: 75%;
     border: 0;
     border-radius: 0.5rem;
     outline: 0;
     padding: 0.7rem;
-    background-color: var(--title-color);
-    color: white;
     letter-spacing: 0.1rem;
     font-size: 1rem;
+    color: var(--white);
+    font-weight: bold;
+    background-color: var(--black);
+    border: 0.2rem solid var(--white);
 }
 
 .item::placeholder {
-    color: white;
     letter-spacing: 0.1rem;
-
 }
 
 .item:hover {
-    background-color: var(--div-color);
     cursor: pointer;
 }
 
 .addBtn {
-    border: solid 0.2rem var(--title-color);
     outline: 0;
+    margin: 0 auto;
     padding: 0.3rem;
     border-radius: 3rem;
-    color: white;
-    background-color: var(--div-border-color);
     cursor: pointer;
-    margin-left: 1rem;
     font-size: 1.2rem;
     font-weight: bold;
-    min-width: 25%;
+    min-width: 50%;
+    border: 0.2rem solid var(--white);
+    background-color: var(--black);
+    color: var(--white);
+
 }
 
 .addBtn:hover {
-    color: white;
-    background-color: var(--text-color);
-}
-
-.newItem {
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    width: 80vw;
-    overflow: hidden;
-    grid-template-columns: repeat(2, 1fr);
-    gap:  1rem;
-}
-
-.textDiv {
-    display: grid;
-    border: solid var(--title-color) 0.3rem;
-    border-radius: 0.5rem;
-    margin-top: 3rem;
-
-}
-
-.text {
-    border: 0;
-    outline: 0;
-    padding: .5rem;
-    color: var(--black-color);
-    font-weight: bold;
-    font-size: large;
-    z-index: 2; 
-    resize: none; 
-    width: 100%;
-    font-family: 'Zilla Slab';
 }
 
 .text:enabled {
-    background: none;
+    background: var(--black);
 }
 
 .toDoListForm {
     display: none;
+}
+
+.my-name {
+    background-color: var(--black);
+    color: var(--white);
+    text-transform: uppercase;
+    /* text-align: right; */
+    font-size: larger;
+    padding: 2rem;
+    position: fixed;
+    bottom: 0;
+    right: 0;
 }
 
 @media screen and (min-width: 600px) {
@@ -206,11 +189,15 @@ i  {
     .newItem {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        justify-content: center;
-    
+        /* justify-content: center; */
+        margin: 3rem;
     }
 
-   
+    .input-box{
+        margin: 3rem 10rem;
+    }
 
-   
+    .addBtn {
+    min-width: 10%;        
+    }
 }

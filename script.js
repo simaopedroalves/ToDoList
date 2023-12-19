@@ -15,8 +15,8 @@ const displayDate = () => {
     //      hours = hours.slice(0,5).join('')
     //  console.log(hours);
     //  hourText.textContent = hours
-    
-} 
+
+}
 
 const item = document.querySelector('#item')
 const addBtn = document.querySelector('#addBtn')
@@ -29,15 +29,17 @@ addBtn.addEventListener('click', () => {
     createItem(item)
 })
 
-item.addEventListener("keypress", (e) => {
-    if(e.key === "Enter"){
-      createItem(item)
-    }
-})
+
+
+// item.addEventListener("keypress", (e) => {
+//     if(e.key === "Enter"){
+//       createItem(item)
+//     }
+// })
 
 item.addEventListener('click', () => {
     item.setAttribute("placeholder", "")
-})  
+})
 
 function createItem(item) {
     storageArray.push(item.value)
@@ -66,11 +68,13 @@ function displayList () {
     deleteOneItem()
     edit()
     saveNote()
-    hoverLine()
-    
+    // hoverLine()
+
 }
 
-
+// toDoItem.addEventListener('click', () => {
+//     toDoItem.classList.toggle('to-be-big')
+// })
 
 function deleteOneItem () {
     const delBtn = document.querySelectorAll('.xBtn')
@@ -97,7 +101,7 @@ function edit() {
 
     editBtn.forEach((btn, i) => {
             btn.addEventListener('click', () => {
-            editNote(i) // edit note 
+            editNote(i) // edit note
             showSaveBtn(i) // save button appear
             styleBtns(i) // delete Btn and Edit Btn desappear
         })
@@ -146,19 +150,19 @@ function saveNote() {
         saveBtn[i].style.display = 'none'
     })
 
-    
-    
-}
-   
-function hoverLine() {
-    let checkBtn = document.querySelectorAll('.checkBtn')
 
-    checkBtn.forEach((btn, i) => {
-            btn.addEventListener('click', () => {
-                checked(i)
-            })
-    })
+
 }
+
+// function hoverLine() {
+//     let checkBtn = document.querySelectorAll('.checkBtn')
+
+//     checkBtn.forEach((btn, i) => {
+//             btn.addEventListener('click', () => {
+//                 checked(i)
+//             })
+//     })
+// }
 
 function noteSaved(text, i){
     storageArray[i] = text
@@ -169,15 +173,15 @@ function noteSaved(text, i){
 
 // function saveBtnDesappear(i) {
 //     let saveBtn = document.querySelectorAll('.saveBtn')
-    
+
 //     saveBtn[i].style.display = 'none'
 // }
 
 
-function checked(i) {
-    let text = document.querySelectorAll('#toDoItem')
-    text[i].style.textDecoration = 'line-through solid red 5px'
-}
+// function checked(i) {
+//     let text = document.querySelectorAll('#toDoItem')
+//     text[i].style.textDecoration = 'line-through solid red 5px'
+// }
 
 // ================================================================
 //                             SHARE
@@ -185,7 +189,7 @@ function checked(i) {
 
 
 const userEmail = document.getElementById('userEmail')
-const sendTO = document.getElementById('cc') 
+const sendTO = document.getElementById('cc')
 const submitNotes = document.getElementById('submitNotes')
 
 submitNotes.addEventListener('click', () => {
