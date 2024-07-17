@@ -147,8 +147,6 @@ i  {
 
 .my-name {
     background-color: transparent;
-    color: var(--white);
-    text-transform: uppercase;
     /* text-align: right; */
     font-size: larger;
     padding: 2rem;
@@ -156,6 +154,11 @@ i  {
     bottom: 0;
     right: 0;
     font-family: 'Zilla Slab';
+}
+
+.my-name a {
+    color: var(--white);
+    text-decoration: none;
 }
 
 @media screen and (min-width: 600px) {
