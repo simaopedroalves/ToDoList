@@ -50,7 +50,7 @@
     outline: 0;
     padding: .5rem;
     font-size: large;
-    z-index: 2; 
+    /* z-index: 2;  */
     resize: none; 
     font-weight: 500;
     font-family: 'Zilla Slab';
