@@ -44,6 +44,7 @@
 
 .text {
     border: 0.1rem solid var(--white);
+    background: gray;
     color: var(--white);
     letter-spacing: 0.1rem;
     outline: 0;
@@ -51,6 +52,7 @@
     font-size: large;
     z-index: 2; 
     resize: none; 
+    font-weight: 500;
     font-family: 'Zilla Slab';
 
 }
