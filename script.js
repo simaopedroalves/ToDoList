@@ -101,6 +101,10 @@ function edit() {
 
     editBtn.forEach((btn, i) => {
             btn.addEventListener('click', () => {
+            btn.parentElement.parentElement.classList.add('itemZoomToEdit');
+            btn.parentElement.parentElement.querySelector('.text').classList.add('textToZoom');
+            console.log(btn.parentElement.parentElement);
+            
             editNote(i) // edit note
             showSaveBtn(i) // save button appear
             styleBtns(i) // delete Btn and Edit Btn desappear
