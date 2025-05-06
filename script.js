@@ -25,17 +25,19 @@ const toDoItem = document.querySelectorAll('#toDoItem')
 
 const storageArray = localStorage.getItem('list') ? JSON.parse(localStorage.getItem('list')) : [];
 
+
+
 addBtn.addEventListener('click', () => {
     createItem(item)
 })
 
 
 
-// item.addEventListener("keypress", (e) => {
-//     if(e.key === "Enter"){
-//       createItem(item)
-//     }
-// })
+item.addEventListener("keypress", (e) => {
+    if(e.key === "Enter"){
+      createItem(item)
+    }
+})
 
 item.addEventListener('click', () => {
     item.setAttribute("placeholder", "")
